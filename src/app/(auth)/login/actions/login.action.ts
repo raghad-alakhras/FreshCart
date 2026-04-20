@@ -1,0 +1,23 @@
+'use server'
+import { cookies } from "next/headers";
+import { loginSchemaType } from "../schema/login.schema";
+export async function loginFun(formData:loginSchemaType){
+    const data = await fetch(`https://ecommerce.routemisr.com/api/v1/auth/signin`, 
+        {method:'post', 
+            body:JSON.stringify(formData), 
+            headers:{
+                'content-type':'application/json'
+            }
+        }
+    )
+    if(!data.ok)
+        throw new Error(data.statusText)
+    const payload = await data.json()
+  console.log('payload', payload)
+    // cookie
+    const cookie= await cookies()
+    cookie.set('token',payload?.token,{
+        httpOnly:true
+    })
+    return data.ok;
+}
