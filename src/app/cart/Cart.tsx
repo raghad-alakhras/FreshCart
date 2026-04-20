@@ -26,7 +26,6 @@ export default function Cart() {
            if(!data.ok){
             toast.error(data?.statusText || 'unathorized User',{position:'top-right'})
            }
-      
            return data.json()
         }
     })
@@ -66,7 +65,7 @@ export default function Cart() {
            <div className="lg:w-3/4">
              {data?.data?.products?.map((product:productItem)=><ProductCart prod={product} key={product?.product?._id}/>)}
                  {
-                data?.data?.products.length === 0 &&  
+                data?.numOfCartItems ===0 &&  
                 <><h3 className='text-center my-5' >your cart is Empty</h3></>
              }
              <div className="flex items-center justify-between my-8 *:flex *:items-center *:gap-2">
