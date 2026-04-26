@@ -30,7 +30,6 @@ export default function Cart() {
         }
     })
    
-    console.log(data)
      // clear cart item
         const{mutate:clearMutate,data:clearData,isPending:clearPending} = useMutation({
         mutationFn:clearCart,
