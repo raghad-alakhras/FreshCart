@@ -12,11 +12,17 @@ export default function AddToWishlist({ children, cls, id }: WishListComp) {
   const queryClient = useQueryClient();
   const { data, mutate } = useMutation({
     mutationFn: addToWishlist,
-    onSuccess: () => {
-      toast.success("The Product Added Successfully to your Wishlist", {
+    onSuccess: (data) => {
+      console.log(data)
+      if(data?.statusMsg ==='fail'){
+        toast.error(data?.message, {
+        position: "top-right",
+      })
+      }
+      else{toast.success("The Product Added Successfully to your Wishlist", {
         position: "top-right",
       });
-      queryClient.invalidateQueries({ queryKey: ["wishlist"] });
+      queryClient.invalidateQueries({ queryKey: ["wishlist"] });}
     },
     onError: () => {
       toast.error("login first");
