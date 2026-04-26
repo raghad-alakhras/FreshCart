@@ -50,8 +50,8 @@ export default function Checkout() {
   }
   async function handleCachPayment(data:formData){
      const response =await  cachPayment(cartData?.cartId! , data)
-    if(response?.status === 'success'){` `
-       route.push(`/allorders/${response?.data?.user}`)
+    if(response?.status === 'success'){
+       route.push(`/allorders`)
     }
      
      
