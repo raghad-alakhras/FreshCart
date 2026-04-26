@@ -18,70 +18,70 @@ export default function Footer() {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g clip-path="url(#clip0_16_7258)">
-              <g clip-path="url(#clip1_16_7258)">
+            <g clipPath="url(#clip0_16_7258)">
+              <g clipPath="url(#clip1_16_7258)">
                 <path
                   d="M8.38493 25.6638C9.9059 25.6638 11.1389 24.4309 11.1389 22.9099C11.1389 21.3889 9.9059 20.1559 8.38493 20.1559C6.86396 20.1559 5.63098 21.3889 5.63098 22.9099C5.63098 24.4309 6.86396 25.6638 8.38493 25.6638Z"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M7.20044 9.48587H23.8596"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M8.65894 12.8177H23.1315"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M7.90759 20.1549H18.6974C19.8792 20.1549 20.9319 19.4041 21.316 18.2858L25.7629 5.34804C26.1471 4.22981 27.1988 3.4791 28.3816 3.4791H31.6166"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M8.38504 23.3075C8.60471 23.3075 8.78278 23.1294 8.78278 22.9098C8.78278 22.6901 8.60471 22.5121 8.38504 22.5121C8.16538 22.5121 7.9873 22.6901 7.9873 22.9098C7.9873 23.1294 8.16538 23.3075 8.38504 23.3075Z"
                   stroke="#0AAD0A"
-                  stroke-width="1.10345"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.10345"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M18.3965 25.6638C19.9175 25.6638 21.1504 24.4309 21.1504 22.9099C21.1504 21.3889 19.9175 20.1559 18.3965 20.1559C16.8755 20.1559 15.6426 21.3889 15.6426 22.9099C15.6426 24.4309 16.8755 25.6638 18.3965 25.6638Z"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M18.3966 23.3075C18.6162 23.3075 18.7944 23.1294 18.7944 22.9097C18.7944 22.6901 18.6162 22.512 18.3966 22.512C18.177 22.512 17.9989 22.6901 17.9989 22.9097C17.9989 23.1294 18.177 23.3075 18.3966 23.3075Z"
                   stroke="#0AAD0A"
-                  stroke-width="1.10345"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.10345"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M21.8703 16.673H7.37794C6.89275 16.673 6.46691 16.3366 6.33363 15.8471L3.87538 6.84261C3.75251 6.3936 4.07424 5.94568 4.51987 5.94568H23.0989"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M1.03162 27.3827C1.03162 27.3827 11.6226 23.7989 25.915 27.3827"
                   stroke="#0AAD0A"
-                  stroke-width="1.32414"
-                  stroke-miterlimit="10"
-                  stroke-linecap="round"
+                  strokeWidth="1.32414"
+                  strokeMiterlimit="10"
+                  strokeLinecap="round"
                 />
                 <path
                   d="M37.7046 25.8064V6.5462H50.4569V9.90357H41.7766V14.4929H49.6105V17.8503H41.7766V25.8064H37.7046Z"

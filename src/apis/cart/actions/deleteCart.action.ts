@@ -1,14 +1,18 @@
 'use server'
 import { getTokenFun } from "@/utilties/getTokenFun";
+import { toast } from "sonner";
 
 export async function deleteCartItem(prodId:string){
     const token =await getTokenFun()
     if(!token){
-        throw new Error('unauthorized user')
+        toast.error('unauthorized user')
+        throw new Error('unathorized')
+       
     }
+
     try {
         const data= await fetch(`${process.env.API}cart/${prodId}`,{
-            method:'delete',
+            method:'DELETE',
             body:JSON.stringify({productId:prodId}),
             headers:{
                 token,

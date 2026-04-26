@@ -53,7 +53,7 @@ export default function Checkout() {
     if(response?.status === 'success'){` `
        route.push(`/allorders/${response?.data?.user}`)
     }
-     console.log('cach',response)
+     
      
   }
 

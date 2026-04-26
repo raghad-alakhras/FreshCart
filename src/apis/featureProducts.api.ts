@@ -9,7 +9,8 @@ export async function getProducts() : Promise<ProductInterface[]>{
     
     if(!url.ok){
         throw new Error(url?.statusText)
-    }const data = await url.json()
+    }
+    const data = await url.json()
     return data.data
    } catch (error:any) {
     throw new Error(error.message || 'Failed to fetch products')

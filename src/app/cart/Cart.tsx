@@ -155,7 +155,9 @@ function ProductCart({prod}:{prod:productItem}){
         onSuccess:()=>{
             queryClient.invalidateQueries({queryKey:['cart']})
         }
+       
     })
+     console.log(deleteData)
     // update cart item
         const{mutate:updateMutate,data:updateData,isPending:updatePending} = useMutation({
         mutationFn:updateCart,
