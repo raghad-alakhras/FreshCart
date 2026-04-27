@@ -25,7 +25,7 @@ export default async function Home() {
      <div className="container mx-auto max-w-[1280px]">
       <div className="flex items-center justify-between">
       <h2 className="before:absolute before:left-0 before:top-0 relative before:w-2 before:h-10 before:rounded-full before:bg-linear-to-b before:from-green-300 before:to-green-700 pl-5 my-5">Shop By <span className="text-green-600">Categories</span></h2>
-      <Link className="flex items-center text-green-600 gap-2 hover:text-green-700" href={'/products'}>View All Categories <FaArrowRight /></Link>
+      <Link className="hidden md:flex items-center text-green-600 gap-2 hover:text-green-700" href={'/products'}>View All Categories <FaArrowRight /></Link>
      </div>
      <div className="grid grid-cols-2 md:grid-cols-6 gap-5 my-10">
        {categories?.map(cate => <CategoryCard cate={cate} key={cate._id}/>) || []}

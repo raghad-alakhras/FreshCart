@@ -21,12 +21,12 @@ export default async function ProductItem({product}:{product:ProductInterface}) 
     <>
     <div className='md:flex gap-5'>
        <ImageSlider product={product}/>
-       <div className="md:w-2/3 p-4 mt-6 ml-4">
+       <div className="md:w-2/3 sm:p-4 mt-6 ml-4">
            <div className='flex items-center gap-3'>
             <p className="px-4 py-2 rounded-full bg-green-50 text-green-600 text-[12px]">{product?.category?.name}</p>
             <p className="px-4 py-2 rounded-full bg-gray-50 text-gray-600 text-[12px]">{product?.brand?.name}</p>
            </div>
-           <h1 className='mt-6 mb-2'>{product?.title}</h1>
+           <h1 className='mt-6 mb-2 text-sm sm:text-xl'>{product?.title}</h1>
            <div className="flex items-center gap-4">
             {<StarRating rating={product?.ratingsAverage}/>}
             <div className="flex items-center gap-1 *:text-[14px] *:text-gray-500">
@@ -61,7 +61,7 @@ export default async function ProductItem({product}:{product:ProductInterface}) 
             <span>Add to cart</span>
           
         </AddToCartButton>
-          <button className='w-full md:w-1/2 py-2 rounded-[12px] bg-black text-white flex items-center gap-2 justify-center'>
+          <button className='w-full md:w-1/2 py-2 mt-5 rounded-[12px] bg-black text-white flex items-center gap-2 justify-center'>
             <FaBoltLightning  className='text-white' />
             <span>Buy Now</span>
           </button>

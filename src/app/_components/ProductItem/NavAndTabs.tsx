@@ -13,14 +13,14 @@ export default function NavAndTabs({ product }: { product: ProductInterface }) {
 
   return (
     <div className="my-4">
-      <div className="flex items-center gap-10 border-b border-gray-300 *:p-3 *:flex *:items-center *:cursor-pointer *:gap-2  ">
+      <div className="flex items-center md:gap-10 border-b border-gray-300 *:p-3 *:flex *:text-sm *:sm:text-md *:cursor-pointer *:gap-2  ">
         <p
           onClick={() => {
             setActive("productDetails");
           }}
-          className={`${isActive=='productDetails' ? "text-green-600 bg-green-50 border-b-3 border-green-600" : "text-gray-600"}`}
+          className={`${isActive=='productDetails' ? "text-green-600 bg-green-50 border-b-3 border-green-600" : "text-gray-600"} `}
         >
-          <FaBagShopping /> <span>Product Details</span>
+          <FaBagShopping className="text-md" /> <span>Product Details</span>
         </p>
         <p
           onClick={() => {
@@ -28,7 +28,7 @@ export default function NavAndTabs({ product }: { product: ProductInterface }) {
           }}
           className={`${isActive==='reviews' ? "text-green-600 bg-green-50 border-b-3 border-green-600" : "text-gray-600"}`}
         >
-          <FaStar /> <span>Reviews ({product?.ratingsQuantity})</span>
+          <FaStar className="text-md"  /> <span>Reviews ({product?.ratingsQuantity})</span>
         </p>
         <p
           onClick={() => {
@@ -36,7 +36,7 @@ export default function NavAndTabs({ product }: { product: ProductInterface }) {
           }}
           className={`${isActive==='delivery' ? "text-green-600 bg-green-50 border-b-3 border-green-600" : "text-gray-600"}`}
         >
-          <TbTruckDelivery /> <span>Delivery and Shipping</span>
+          <TbTruckDelivery className="text-md"  /> <span>Delivery and Shipping</span>
         </p>
       </div>
     {isActive==='productDetails' &&  <div className="p-3 pb-6 my-5" >

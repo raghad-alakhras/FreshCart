@@ -17,23 +17,21 @@ export default function ImageSlider({
   }
 
   return (
-    <div className="p-4 md:w-1/3 ">
+    <div className="p-4 md:w-1/3 overflow-hidden">
       <Image
         src={imgPreview}
         alt={product?.title}
         width={100}
         height={100}
-        className="w-1/2 mb-2"
+        className="w-1/2 mb-2 object-cover"
       />
       <Swiper
         className="mt-4"
         spaceBetween={1}
-        slidesPerView={3}
-        onSlideChange={() => console.log("slide change")}
-        onSwiper={(swiper) => console.log(swiper)}
+        slidesPerView={3}  
       >
         {product?.images.map((img) => (
-          <SwiperSlide className="cursor-pointer ">
+          <SwiperSlide className="cursor-pointer">
             <Image
               onClick={() => {
                 changeImgPreview(img);
