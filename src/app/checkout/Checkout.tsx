@@ -70,7 +70,7 @@ export default function Checkout() {
       </p>
       <div className="flex items-center gap-2 mt-6 mb-2">
         <div className="size-12 rounded-xl bg-linear-to-bl from-green-700 to-green-400 flex items-center justify-center text-white">
-          <FaNewspaper className="text-2xl" />
+          <FaNewspaper className="text-lg md:text-2xl" />
         </div>
         <p className="text-[30px] font-bold">Complete Your Order</p>
       </div>

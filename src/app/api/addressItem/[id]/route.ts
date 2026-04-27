@@ -6,8 +6,6 @@ export async function GET(req:NextRequest, { params }: { params: Promise<{ id: s
 
     const { id: addressId } = await  params
     
-    console.log('Fetching address for ID:', addressId)
-    
     const token = await getToken({req})
     if(!token){
         return NextResponse.json({error:'Unauthorized'})

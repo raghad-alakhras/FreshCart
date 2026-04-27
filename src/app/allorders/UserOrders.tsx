@@ -77,7 +77,7 @@ function OrderDetails({order}:{order:OrderData}){
                         <span>proccessing</span>
                     </div>}
                     <p className="text-gray-500 mt-1"># <span className="text-black font-bold">{order?.id}</span></p>
-                    <div className="flex items-center my-1 gap-4 *:flex *:items-center *:gap-2 *:text-xs *:text-gray-600">
+                    <div className="flex-col md:flex items-center my-1 gap-5 *:flex *:items-center *:gap-2 *:text-xs *:text-gray-600">
                         <div>
                             <BiSolidCalendarHeart />
                             <span>{formatDate(order?.createdAt)}</span>
@@ -116,7 +116,7 @@ function OrderDetails({order}:{order:OrderData}){
                         {order?.cartItems?.map( cart=>{return <>
                         <div className='flex items-center justify-between p-4 rounded-lg'>
                             <div className="flex items-center gap-3">
-                                <Image src={cart?.product?.imageCover} alt={cart?.product?.title} width={30} height={30} className='object-cover size-16 rounded-mf'/>
+                                <Image src={cart?.product?.imageCover} alt={cart?.product?.title} width={30} height={30} className='object-cover size-16 rounded-md'/>
                                 <div>
                                     <p className="font-semibold mb-1">{cart?.product?.title}</p>
                                     <p className="font-light text-gray-500 text-sm mb-1">{cart?.count} x {cart?.price} EGP</p>
@@ -131,7 +131,7 @@ function OrderDetails({order}:{order:OrderData}){
                         </>})}
                         {/* order details */}
                          <div className="md:flex md:gap-10 *:w-full *:md:w-1/2 *:p-4 *:rounded-lg *:border ">
-                           <div className='border-gray-200'>
+                           <div className='border-gray-200 my-5'>
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="size-6 rounded-md bg-blue-50 text-blue-600 flex items-center justify-center">
                                     <IoLocationSharp />

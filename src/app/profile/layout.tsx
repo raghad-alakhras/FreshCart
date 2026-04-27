@@ -8,7 +8,7 @@ import AddAddressBtn from './accountAddress/AddAddressBtn'
 export default function layout({children}:{children : ReactNode}) {
   return (
     <div>
-         <div className="bg-linear-to-r from-green-600 to-green-500 my-4 px-30 py-10 h-fit">
+         <div className="bg-linear-to-r from-green-600 to-green-500 my-4 px-6 md:px-30 py-10 h-fit">
                   <p className="flex items-center gap-3 *:text-sm my-2">
                           <Link href={"/"} className="text-gray-300">
                             Home /{" "}
@@ -20,8 +20,8 @@ export default function layout({children}:{children : ReactNode}) {
                           
                         </p>
                         <div className="flex items-center gap-6 my-5">
-                          <div className="size-16 rounded-lg bg-green-400/50 text-white flex items-center justify-center">
-                            <FaUser  className='text-4xl' />
+                          <div className="w-16 h-10 md:size-16 rounded-lg bg-green-400/50 text-white flex items-center justify-center">
+                            <FaUser  className='text-lg md:text-4xl' />
                           </div>
                           <div>
                             <h2 className='text-white'>My Account</h2>
@@ -29,9 +29,9 @@ export default function layout({children}:{children : ReactNode}) {
                           </div>
                         </div>
                 </div>
-                <div className="container mx-auto max-w-[1280px] flex gap-10 my-5 *:p-4 *:rounded-xl">
+                <div className="container mx-auto max-w-[1280px] md:flex gap-10 my-5 *:p-4 *:rounded-xl">
                
-            <div className="md:w-1/4 border h-fit border-gray-300">
+            <div className="w-9/10 mx-auto md:w-1/4 border h-fit border-gray-300">
               <h6 className='pb-4 border-b border-gray-100'>My Account</h6>
               <div className="*:flex *:items-center *:justify-between p-2 *:px-4 *:py-3 *:rounded-lg *:w-full">
                 <Link href={`/profile/accountAddress`} className='group focus:bg-green-50 cursor-pointer'>

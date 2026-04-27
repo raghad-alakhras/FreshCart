@@ -82,7 +82,7 @@ const {data:addressItemsData} = useQuery<AddressItem>({
     }
     return data.json()
   },
-    enabled: editForm!=='',
+    enabled: editForm!==null,
 })
   useEffect(() => {
   if (addressItemsData?.data) {
@@ -102,14 +102,14 @@ function handleEditForm(editedData: UserAddress){
 
   return (
   <>
-   <div className='md:flex md:justify-between md:items-center'>
+   <div className='flex-col  md:flex md:justify-between md:items-center'>
                 <div>
                   <h6>My Addresses</h6>
-             <p className='text-gray-600 mt-2'>Manage your saved delivery addresses</p>
+             <p className='text-gray-600 mt-1'>Manage your saved delivery addresses</p>
                 </div>
                 <button
                 onClick={()=>{setOpenForm(true)}}
-                className='cursor-pointer flex px-3 py-2 items-center gap-2 text-white bg-green-600 rounded-md shadow-md'>
+                className='cursor-pointer flex px-3 py-2 mt-4 items-center gap-2 text-white bg-green-600 rounded-md shadow-md'>
                   <FaPlus />
                   <span>Add Address</span>
                 </button>
@@ -119,12 +119,12 @@ function handleEditForm(editedData: UserAddress){
     </div>
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
          {userAddresses?.data?.length !== 0 && (userAddresses?.data?.map((address:UserAddress) =><>
-    <div className=" mt-10 p-5 flex  justify-between rounded-lg border border-gray-300">
+    <div key={address?._id} className=" mt-10 p-5 flex  justify-between rounded-lg border border-gray-300">
       <div className="flex gap-2">
         <div className="size-9 bg-green-200  rounded-md flex items-center justify-center text-green-600 text-xl">
             <IoLocationSharp />
           </div>
-          <div>
+        <div>
            <h6>{address?.city} City</h6>
            <p className='text-gray-600 mt-1'>{address?.details}</p>
            <div className=" mt-10 flex items-center gap-4 *:flex *:items-center *:gap-1 *:text-gray-500 *:text-sm">
