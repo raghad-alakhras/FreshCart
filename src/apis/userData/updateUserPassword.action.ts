@@ -20,7 +20,10 @@ export async function updateUserPass(formData:changePassSchemaType){
         })
         const payload = await data.json()
         const cookie = await cookies()
-        cookie.set('token',payload?.token)
+         const cookieName = process.env.NODE_ENV==='production'
+          ?'__Secure-next-auth.session-token'
+          :'next-auth.session-token'
+        cookie.set(cookieName,payload?.token)
        
         return payload.message
     } catch (error) {
