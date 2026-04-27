@@ -10,8 +10,9 @@ import { toast } from 'sonner'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { changePassSchema, changePassSchemaType } from './schema/changePassSchema'
 import { updateUserPass } from '@/apis/userData/updateUserPassword.action'
+import { useRouter } from 'next/navigation'
 export default function ChangePassword() {
- 
+ const router = useRouter()
        const {control,handleSubmit,reset}= useForm<changePassSchemaType>({
          resolver: zodResolver(changePassSchema),
             defaultValues:{
@@ -24,6 +25,7 @@ export default function ChangePassword() {
         onSuccess:(data)=>{
             if(data === 'success'){
                 toast.success('password updated successfully', {position:'top-right'})
+              router.push('/login')
             }else{
                 toast.error(data,{position:'top-right'})
             }

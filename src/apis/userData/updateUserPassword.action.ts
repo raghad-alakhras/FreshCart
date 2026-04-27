@@ -24,7 +24,7 @@ export async function updateUserPass(formData:changePassSchemaType){
           ?'__Secure-next-auth.session-token'
           :'next-auth.session-token'
         cookie.set(cookieName,payload?.token)
-       
+      
         return payload.message
     } catch (error) {
         throw new Error('Must login first')
