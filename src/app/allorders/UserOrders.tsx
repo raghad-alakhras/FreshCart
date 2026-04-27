@@ -127,7 +127,10 @@ function OrderDetails({order}:{order:OrderData}){
                                 <p className="text-gray-500 text-sm">EGP</p>
                             </div>
                         </div>
-                        <div className="md:flex md:gap-10 *:w-full *:md:w-1/2 *:p-4 *:rounded-lg *:border ">
+                       
+                        </>})}
+                        {/* order details */}
+                         <div className="md:flex md:gap-10 *:w-full *:md:w-1/2 *:p-4 *:rounded-lg *:border ">
                            <div className='border-gray-200'>
                             <div className="flex items-center gap-3 mb-2">
                                 <div className="size-6 rounded-md bg-blue-50 text-blue-600 flex items-center justify-center">
@@ -165,7 +168,6 @@ function OrderDetails({order}:{order:OrderData}){
                            </div>
                            </div>
                         </div>
-                        </>})}
                         </div>}
            </div>
 
