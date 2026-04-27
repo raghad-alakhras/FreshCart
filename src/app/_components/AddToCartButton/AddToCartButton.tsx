@@ -14,11 +14,19 @@ export default  function AddToCartButton ({children,cls,id}:BtnUtlties) {
   const queryClient = useQueryClient()
   const{mutate,data}= useMutation({
     mutationFn:addToCart,
-    onSuccess:()=>{
-       toast.success('Product Added Successfully',{
+    onSuccess:(data)=>{
+         if(data.statusMsg =='fail'){
+          toast.error(data?.message,{
+        position:'top-right'
+       })
+         }
+         else{
+           toast.success('Product Added Successfully',{
         position:'top-right'
        })
        queryClient.invalidateQueries({queryKey:['cart']})
+         }
+      
     },
     onError:()=>{
           toast.error('login first',{
@@ -26,6 +34,7 @@ export default  function AddToCartButton ({children,cls,id}:BtnUtlties) {
         })
     }
   })
+
     function handleAddToCart(){
     mutate(id)
     }

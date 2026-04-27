@@ -17,8 +17,6 @@ export default function Slider ({pageItems}:{pageItems:string []}){
       },bulletActiveClass:'bg-white! opacity-100! w-7! rounded-lg!'}}
       spaceBetween={50}
       slidesPerView={1}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log('swip')}
     >
  
       <SwiperSlide>

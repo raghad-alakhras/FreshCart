@@ -74,7 +74,7 @@ export default function NavBar() {
         }
         
     })
-console.log(cartData)
+
         const {data:wishlistData}= useQuery({
             queryKey:['wishlist'],
             queryFn: async ()=>{
