@@ -11,4 +11,4 @@ export async function proxy(req:NextRequest){
     return NextResponse.redirect(new URL('/login',req.url))
     
 }
-export const config = {matcher:['/cart']}
+export const config = {matcher:['/cart','/wishlist','/checkout','/profile/settings','/profile/accountAddress','/allorders']}
