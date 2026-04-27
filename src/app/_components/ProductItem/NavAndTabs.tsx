@@ -41,9 +41,9 @@ export default function NavAndTabs({ product }: { product: ProductInterface }) {
       </div>
     {isActive==='productDetails' &&  <div className="p-3 pb-6 my-5" >
         <h2>About this product</h2>
-        <p className="my-3">{product?.description}</p>
-        <div className="p-4 flex items-center gap-6 ">
-          <div className="p-4 md:w-1/2">
+        <p className="my-3 text-sm md:text-md leading-7">{product?.description}</p>
+        <div className="p-4 md:flex items-center gap-6 ">
+          <div className="p-4 w-full md:w-1/2">
             <p className="font-semibold my-3 text-gray-800">Product Information</p>
             <div className="*:flex *:items-center *:justify-between">
               <div>
@@ -64,7 +64,7 @@ export default function NavAndTabs({ product }: { product: ProductInterface }) {
               </div>
             </div>
           </div>
-          <div className="p-4 mf:w-1/2">
+          <div className="p-4 md:w-1/2">
             <p className="font-semibold text-gray-800 my-3">Key Feature</p>
             <div className="*:flex *:items-center *:gap-2">
             <div>
